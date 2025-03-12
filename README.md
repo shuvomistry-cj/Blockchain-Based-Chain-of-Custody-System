@@ -62,6 +62,8 @@ You can use **Pinata** or **Infura** to upload files and get their **IPFS CID**.
 - Transfer ownership to another Ethereum address.
 - View asset details, including current owner and ownership history.
 
+![Image](https://github.com/user-attachments/assets/38834113-1fad-429a-b529-54af08e9d7a0)
+
 ## License
 This project is licensed under the MIT License.
 
