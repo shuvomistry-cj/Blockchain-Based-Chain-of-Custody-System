@@ -1,40 +1,73 @@
-# Work in Progress............
+# Chain of Custody - Asset Management
 
-🔗 Chain of Custody - Secure Asset Tracking on Blockchain
-🚀 Project Workflow
-1️⃣ User Opens Streamlit App
+## Description
+This is a blockchain-based **Chain of Custody** system built using **Solidity** and **Hardhat** for tracking the ownership of digital assets. It allows users to register digital assets, transfer ownership, and retrieve asset history. The project also supports **IPFS** for storing evidence files (e.g., PDFs) as decentralized assets.
 
-Streamlit-based UI loads.
-MetaMask prompt appears for wallet connection.
-2️⃣ Register an Asset
+## Features
+- **Register digital assets** with unique IDs.
+- **Transfer ownership** of assets securely.
+- **Store and retrieve asset history** on the blockchain.
+- **Upload digital evidence files** (PDFs, images, or other documents) and store their IPFS hash.
+- **Frontend built using Python & Web3** to interact with the smart contract.
 
-User inputs Asset ID and Description.
-MetaMask signs the transaction.
-Asset details are stored on Ethereum (Hardhat) blockchain.
-3️⃣ Transfer Asset Ownership
+## Technologies Used
+- **Solidity** (Smart Contract Development)
+- **Hardhat** (Development & Testing)
+- **Metamask** (Wallet Integration)
+- **IPFS** (Decentralized File Storage)
+- **Python (Flask / Streamlit)** (Frontend & Backend)
+- **Web3.py** (Blockchain Interaction)
 
-Current owner enters new owner’s address.
-MetaMask signs transaction.
-Ownership record updates on blockchain.
-4️⃣ Verify Custody History
+## Installation & Setup
+### 1. Clone the Repository
+```bash
+git clone https://github.com/shuvomistry-cj/Blockchain-Based-Chain-of-Custody-System.git
+```
 
-Anyone can enter Asset ID to check past ownership.
-Smart contract fetches and returns transaction history.
-5️⃣ Streamlit Displays Ownership Data
+### 2. Install Dependencies
+#### Install Hardhat & Node.js dependencies:
+```bash
+npm install
+```
+#### Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-UI dynamically shows real-time ownership history.
-⚙ Tech Stack Overview
-Component	Technology Used
-Frontend (UI)	Streamlit (Python)
-Blockchain	Ethereum (Hardhat Network)
-Wallet Auth	MetaMask (Web3.js in Streamlit)
-Backend	Flask + Web3.py
-Smart Contract	Solidity (Remix + Hardhat)
-Data Storage	Blockchain (Immutable Ledger)
-📌 Next Steps
-✔ Finalize Solidity Smart Contract (Asset Registration + Transfer).
-✔ Deploy Smart Contract on Hardhat Local Network.
-✔ Build Streamlit UI for User Interaction.
-✔ Develop Flask Backend for Blockchain Integration (Web3.py).
+### 3. Start Local Blockchain (Hardhat)
+```bash
+npx hardhat node
+```
 
-Would you like sample code for Streamlit & Web3.py integration? 🚀
+### 4. Deploy Smart Contract
+```bash
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+### 5. Run the Python Frontend
+```bash
+python app.py
+```
+
+### 6. Connect MetaMask to Hardhat Localhost
+- Open **MetaMask**.
+- Add a new **network** with RPC URL: `http://127.0.0.1:8545`.
+- Import an account using a private key from Hardhat.
+
+### 7. Upload Files to IPFS (Optional)
+You can use **Pinata** or **Infura** to upload files and get their **IPFS CID**. Add the CID as a file hash when registering assets.
+
+## Usage
+- Register a new asset by providing **Asset ID**, **Asset Name**, and **File Hash (IPFS CID)**.
+- Transfer ownership to another Ethereum address.
+- View asset details, including current owner and ownership history.
+
+## License
+This project is licensed under the MIT License.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Contact
+For any queries, feel free to reach out at [your-email@example.com].
+
